@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: update-requirements
+        name: Update Requirements
+        entry: python toolscripts/update_requirements.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+        verbose: true
